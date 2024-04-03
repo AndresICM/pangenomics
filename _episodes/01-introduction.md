@@ -42,7 +42,7 @@ The term "pangenome" is a fusion of the Greek words *pan*, which means 'whole', 
 
 The pangenome consists of two primary components or partitions: core genome and accessory genome. The **core genome** comprises gene families that are present in all the genomes being compared, while the **accessory genome** consists of gene families that are not shared by all genomes. Within the accessory genome, we can further distinguish two partitions, the **shell genome**, which encompasses the gene families found in the majority of genomes, and the **cloud genome**, which comprises gene families present in only a minority of genomes. It is worth mentioning that, the specific percentages used to define these partitions may vary across different pangenome analysis software and among researchers. Additional terms such as [*persistent genome* and *soft-core genome*](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1007732) are also commonly used in the field for the groups of genes that are in almost all of the genomes considered.
 
-> ## Pizza pangenomics
+> ## Exercise 1: Pizza pangenomics
 > What are the partitions in your pizza pangenome?
 >  
 > > ## Solution
@@ -63,7 +63,7 @@ To understand these concepts better, we can visualize the pangenome as a matrix 
 In summary, the terms "open pangenome" and "closed pangenome" describe the dynamic nature of gene content in a species, with the former signifying an expanding gene family pool and the latter representing a more stable gene family repertoire.
 
 
-> ## Open or closed?
+> ## Exercise 2: Open or closed?
 >
 >  The size of a pangenome can be influenced by factors such as the extent of gene transfer, interactions with other species in the environment they co-habit, the diversity of niches inhabited, and the lifestyle of the species, among others. 
 >  
