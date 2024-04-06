@@ -75,7 +75,7 @@ In summary, the terms "open pangenome" and "closed pangenome" describe the dynam
 {: .discussion}
 
 > ## Know more
-> If you want to read more on pangenomics go to the book [The Pangenome](https://link.springer.com/book/10.1007/978-3-030-38281-0).
+> If you want to read more on pangenomics go to the book [The Pangenome](https://link.springer.com/book/10.1007/978-3-030-38281-0) edited by Tettelin and Medini.
 {: .callout}
 
 ## Genome database for this workshop 
