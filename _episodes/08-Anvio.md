@@ -1,7 +1,7 @@
 ---
 title: "Interactive Pangenome Plots"
 teaching: 15
-exercises: 40
+exercises: 15
 questions:
 - "How can I obtain an interactive pangenome plot?"
 - "How can I measure the homogeneity of the gene families?"
