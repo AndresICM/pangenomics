@@ -301,7 +301,34 @@ downloading strain 2603V/R
 ~~~
 {: .output}
 
-
+> ## Exercise 1: Loops
+>  Let's further practice using loops to download genomes in batches.
+>  For the sentences below, select only the necessary and their correct order to achieve the desired output:
+> 
+>  A) ncbi-genome-download --formats fasta --genera "Streptococcus agalactiae" -S strain -o agalactiae_strain bacteria
+>  B) cat TettlinList.txt | while read strain
+>  C) done
+>  D) echo Downloading line
+>  E) cat TettlinList.txt | while read line
+>  F) do
+>  G) ncbi-genome-download --formats fasta --genera "Streptococcus agalactiae" -S $strain -o agalactiae_$strain bacteria
+>  H) echo Downloading $strain
+>
+>  **Desired Output**
+>  ~~~
+>  Downloading A909
+>  Downloading COH1
+>  Downloading CJB111
+>  Downloading NEM316
+>  Downloading 2603V/R
+>  ~~~
+>  {: .output}
+>  
+> > ## Solution
+> > B, F, H, G, D 
+> > 
+> {: .solution}
+{: .challenge}
 
 Just as before, we should decompress the downloaded genome files using `gunzip`.
 To do so, we can use the `*` wildcard, which means "anything", instead of unzipping
@@ -479,7 +506,7 @@ $ rm agalactiae_CJB111/GCF_015221735.2_ASM1522173v2_genomic.fna
 >  can be downloaded by specifying our queries with `--format genbank`.
 {: .callout}
 
-> ## Exercise 1: Searching for desired strains
+> ## Exercise 2: Searching for desired strains
 >  Until now we have downloaded only specific strains that we were looking for. Write a command that would tell you which genomes are 
 >  available for all the *Streptococcus* genera.
 >
