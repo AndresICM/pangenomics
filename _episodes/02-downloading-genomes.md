@@ -305,21 +305,21 @@ downloading strain 2603V/R
 >  Let's further practice using loops to download genomes in batches.
 >  For the sentences below, select only the necessary and their correct order to achieve the desired output:
 > 
->  A) ncbi-genome-download --formats fasta --genera "Streptococcus agalactiae" -S strain -o agalactiae_strain bacteria
+>  A) `ncbi-genome-download --formats fasta --genera "Streptococcus agalactiae" -S strain -o agalactiae_strain bacteria`
 > 
->  B) cat TettlinList.txt | while read strain
+>  B) `cat TettlinList.txt | while read strain`
 >
->  C) done
+>  C) `done`
 >
->  D) echo Downloading line
+>  D) `echo Downloading line`
 >
->  E) cat TettlinList.txt | while read line
+>  E) `cat TettlinList.txt | while read line`
 >
->  F) do
+>  F) `do`
 >
->  G) ncbi-genome-download --formats fasta --genera "Streptococcus agalactiae" -S $strain -o agalactiae_$strain bacteria
+>  G) `ncbi-genome-download --formats fasta --genera "Streptococcus agalactiae" -S $strain -o agalactiae_$strain bacteria`
 >
->  H) echo Downloading $strain
+>  H) `echo Downloading $strain`
 >
 > 
 >  **Desired Output**
