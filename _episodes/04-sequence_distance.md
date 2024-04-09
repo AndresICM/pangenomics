@@ -1,7 +1,7 @@
 ---
 title: "Measuring Sequence Similarity"
 teaching: 30
-exercises: 15
+exercises: 5
 questions:
 - "How can we measure differences in gene sequences?"
 objectives:
