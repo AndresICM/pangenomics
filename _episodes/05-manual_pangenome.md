@@ -1,7 +1,7 @@
 ---
 title: "Clustering with BLAST Results"  
 teaching: 30
-exercises: 15
+exercises: 5
 questions:
 - "How can we use the blast results to form families?"
 objectives:
