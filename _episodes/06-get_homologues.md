@@ -231,7 +231,7 @@ do
 base=$(basename $i .txt)
 cat $i | while read line 
 do
-echo $base$'\t'$line >> gene_families.tsv
+echo -e $base$'\t'$line >> gene_families.tsv
 done
 done
 ~~~
@@ -264,6 +264,34 @@ $ head gene_families.tsv
 {: .output}
 
 Now we have in only one file the description of our clustering results!
+
+> ## Exercise 1: Counting singletons
+>
+> Singleton gene families are those which are present only in a single genome. Their
+> importance lies in that they are often related to ecological adaptations. Complete
+> the following command in order to calculate the number of singleton gene families
+> from the `gene_families.tsv` file we just created.
+> 
+> ~~~
+> $ cut -f ____ gene_families.tsv | sort | uniq ____ | wc ____
+> ~~~
+> {: .language-bash}
+> 
+>> ## Solution
+>>
+>> The information of the gene families is contained within the first column, so we
+>> write the number 1 for the `-f` parameter of `cut`. Next, we need to extract unique
+>> lines, which is accomplished by sorting the file and then using the `-u` option for
+>> `uniq`, which only prints unique lines on the screen. Finally, to count the number
+>> of resulting lines, we use `wc -l`. Thus, the full command looks like this:
+>> 
+>> ~~~
+>>  $ cut -f 1 gene_families.tsv | sort | uniq -u | wc -l
+>>  ~~~
+>> {: .language-bash}
+>> 
+>{: .solution}
+{: .challenge}
 
 ## Obtaining a pangenomic matrix for a shell genome database
 
