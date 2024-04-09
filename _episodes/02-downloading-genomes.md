@@ -306,14 +306,22 @@ downloading strain 2603V/R
 >  For the sentences below, select only the necessary and their correct order to achieve the desired output:
 > 
 >  A) ncbi-genome-download --formats fasta --genera "Streptococcus agalactiae" -S strain -o agalactiae_strain bacteria
+> 
 >  B) cat TettlinList.txt | while read strain
+>
 >  C) done
+>
 >  D) echo Downloading line
+>
 >  E) cat TettlinList.txt | while read line
+>
 >  F) do
+>
 >  G) ncbi-genome-download --formats fasta --genera "Streptococcus agalactiae" -S $strain -o agalactiae_$strain bacteria
+>
 >  H) echo Downloading $strain
 >
+> 
 >  **Desired Output**
 >  ~~~
 >  Downloading A909
