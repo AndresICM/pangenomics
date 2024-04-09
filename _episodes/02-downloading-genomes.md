@@ -1,7 +1,7 @@
 ---
 title: "Downloading Genomic Data"
 teaching: 30
-exercises: 15
+exercises: 5
 questions:
 - "How to download public genomes by using the command line?"
 objectives:
