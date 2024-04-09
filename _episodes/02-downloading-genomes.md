@@ -12,15 +12,15 @@ keypoints:
 
 ## Getting Genomic Data from the NCBI
 
-In the [previous episode](https://paumayell.github.io/pangenomics/01-introduction/index.html), we downloaded the working directory for this workshop that already contains the genomes of strains `18RS21` and `H36B` within our `pan_workshop/data` directory. However, the remaining six GBS strains will be downloaded in this episode. We will obtain these genomic sequences from the National Center for Biotechnology Information (NCBI) database, the primary source of publicly available genomes. To automate the downloading process, we are going to utilize the specialized `ncbi-genome-download` [program](https://github.com/kblin/ncbi-genome-download), which includes convenient shell commands that allow users to download genomes directly from the NCBI. This package offers great flexibility by enabling users to specify their desired queries. It simplifies the process of retrieving the data and ensures that is conveniently saved into the working directory. 
+In the [previous episode](https://paumayell.github.io/pangenomics/01-introduction/index.html), we downloaded the working directory for this workshop that already contains the genomes of GBS strains `18RS21` and `H36B` within our `pan_workshop/data` directory. However, we need another six GBS strains that will be downloaded in this episode. For this purpose, we will learn how to use the specialized `ncbi-genome-download` [package](https://github.com/kblin/ncbi-genome-download), which was designed to automatically download one or several genomes directly from the NCBI by following specific filters set by user.
 
-The `ncbi-genome-download` package can be installed with Conda (the package and environment manager we will be using). In our case, we have already installed it into the environment under the same name. To use the package, we just have to activate the *ncbi-genome-download* conda environment. 
+The `ncbi-genome-download` package can be installed with Conda. In our case, we have already installed it into the environment under the same name. To use the package, we just have to activate the *ncbi-genome-download* conda environment. 
 
 > ## Know more
 > If you want to know more about what is *conda* and its *environments* visit this [link](https://docs.conda.io/en/latest/).
 {: .callout}
 
-Let's activate the *ncbi-genome-download* conda environment to begin.  
+To start using the `ncbi-genome-download package`, we have to activate the conda environment where it was installed  
 ~~~
 $ conda activate /miniconda3/envs/ncbi-genome-download
 ~~~
@@ -33,7 +33,6 @@ $ conda activate /miniconda3/envs/ncbi-genome-download
 
 For practicality, the prompt will be written only as `$` instead of `(ncbi-genome-download) $`.
 
-Now, you are able to run the package `ncbi-genome-download`. 
 Exploring the range of options available in the package is highly recommended in order to choose well and get what you really need. To access the complete list of parameters to incorporate in your downloads, simply type the following command: 
 
 ~~~
@@ -84,12 +83,11 @@ usage:
 ~~~
 {: .output}
 
-If you type `ncbi-genome-download` and you get the error `command-not-found`,
-it could be because you are in the `base` and not inside the *ncbi-genome-download*
-conda environment. Come back to the previous instruction and let's move on. 
+> ## Note 
+> Importantly, when using the `ncbi-genome-download` command, we must specify the *group* to which the organisms we want to download from NCBI belong. This name must be indicated at the end of the command, after specifying all the search parameters for the genomes of interest that we want to download. The groups' names include: bacteria, fungi, viral, vertebrates_mammalian, among others.
+{: .callout}
 
 Now, we have to move into our `data/` directory
-
 ~~~
 $ cd ~/pan_workshop/data
 ~~~
@@ -107,16 +105,16 @@ $ ls
 {: .language-bash}
 
 ~~~
-agalactiae_18RS21  agalactiae_H36B annotated_mini
+agalactiae_18RS21   agalactiae_H36B   annotated_mini
 ~~~
 {: .output}
 
-Prior to downloading anything from the NCBI, we recommend verifying if the genome or genomes you are interested in are available in the database. The package `ncbi-genome-download` includes the `--dry-run` or `-n` flag, which means that the algorithm only will check the genomes you specify to download, but without downloading the files. Other useful flags are `--formats`, which serve to specify the desired format; `--genera` to specify the genus (or species), and `-S` for the strains. Importantly, the `ncbi-genome-download` command must always end with the name of the group of organisms where the search will be performed, which in our case will be `bacteria`. 
+Downloading several complete genomes could consume significant memory and time. It is essential to ensure the accuracy of the filters or parameters we use before downloading a potentially incorrect list of genomes. A recommended strategy is to utilize the --dry-run (or -n) flag included in the ncbi-genome-download package, which conducts a search of the specified genomes without downloading the files. Once we confirm that the list of genomes found is correct, we can proceed with the same command, removing the --dry-run flag 
 
-So, first, let's check if one of the genomes we are interested in downloading, "*Streptococcus agalactiae* 515", is available in NCBI. We will use the flags mentioned above.
+So, first, let's confirm the availability of one of the genomes we aim to download, namely *Streptococcus agalactiae* 515, on NCBI. To do so, we will employ the --dry-run flag mentioned earlier, specifying the genus and strain name, selecting the FASTA format, and indicating its group (bacteria).
 
 ~~~
-$ ncbi-genome-download -n --formats fasta --genera "Streptococcus agalactiae" -S 515 bacteria 
+$ ncbi-genome-download --dry-run --genera "Streptococcus agalactiae" -S 515 --formats fasta bacteria 
 ~~~
 {: .language-bash}
 ~~~
@@ -130,7 +128,7 @@ Great! The genome is available!
 Now, we can proceed to download it. To better organize our data, we can save this file into a specific directory for this strain. We can indicate this instruction with the `--output-folder` or `-o` flag followed by the name we choose. In this case, will be `-o agalactie_515`. Notice that now we no longer need the flag the `-n`.  
 
 ~~~
-$ ncbi-genome-download --formats fasta --genera "Streptococcus agalactiae" -S 515 -o agalactiae_515 bacteria 
+$ ncbi-genome-download --genera "Streptococcus agalactiae" -S 515 --formats fasta -o agalactie_515 bacteria
 ~~~
 {: .language-bash}
 
@@ -152,6 +150,12 @@ agalactiae_515
 3 directories, 2 files
 ~~~
 {: .output}
+
+> ## MD5SUMS file
+> Apart from the fasta file that we wanted, a file called `MD5SUMS` was also downloaded. This file has a unique code that identifies the contents of the 
+> files of interest, so you can use it to check the integrity of your downloaded copy. We will not cover that step in the lesson but you can check 
+> this [article](https://www.geeksforgeeks.org/md5sum-linux-command/) to see how you can use it.
+{: .callout}
 
 The genome file `GCF_012593885.1_ASM1259388v1_genomic.fna.gz` 
 is a compressed file located inside the directory
@@ -180,13 +184,6 @@ agalactiae_515/
 which means is in a nucleotide `fasta` format. Let's move the file to the
 `agalactiae_515/` directory and remove the extra content that we will not 
 use again in this lesson.
-
-> ## MD5SUMS file
-> Apart from the fasta file that we wanted, a file called `MD5SUMS` was also downloaded. This file has a unique code that identifies the contents of the 
-> files of interest, so you can use it to check the integrity of your downloaded copy. We will not cover that step in the lesson but you can check 
-> this [article](https://www.geeksforgeeks.org/md5sum-linux-command/) to see how you can use it.
-{: .callout}
-
 ~~~
 $ mv agalactiae_515/refseq/bacteria/GCF_012593885.1/GCF_012593885.1_ASM1259388v1_genomic.fna agalactiae_515/.
 $ rm -r agalactiae_515/refseq
@@ -200,19 +197,18 @@ GCF_012593885.1_ASM1259388v1_genomic.fna
 
 ## Download multiple genomes
 
-Right now, you have the _S. agalactiae 505_ genomic `fasta` file in a directory.
-However, five more strains were included in Tettelin's first pangenome. It is the moment
-to practice what you've learned about loops in the shell lesson. Instead
-of downloading the genomes one by one, we will write a `while` loop.  
+So far, we have learned how to download a single genome using the `ncbi-genome-download` package. Now, we need to retrieve an additional five GBS strains using the same method. However, this time, we will explore how to utilize loops to automate and expedite the process of downloading multiple genomes in batches.
 
-With the `nano` editor, create a file to add the other four strains. The missing strains are A909, 
-COH1, CJB111, NEM316 and 2603V/R. Write one strain per line in the file and name it
-"TettelinList.txt".
+Using the `nano` editor, create a file to include the name of the other four strains: A909, COH1, CJB111, NEM316, and 2603V/R. Each strain should be written on a separate line in the file, which should be named "TettelinList.txt"
 
 ~~~
 $ nano TettelinList.txt  
 ~~~
 {: .language-bash}
+
+> ## The "nano" editor
+> Nano is a straightforward and user-friendly text editor designed for use within the terminal interface. After launching Nano, you can immediately begin typing and utilize your arrow keys to navigate between characters and lines. When your text is ready, press the `Esc` key and type `:wq` to save your changes and exit Nano, confirming the filename if prompted. Conversely, if you wish to exit Nano without saving any changes, press `Esc` followed by `:q!`. For more advanced functionalities, you can refer to the [nano manual](https://www.nano-editor.org/dist/v2.0/nano.html).
+{: .callout}
 
 Visualize "Tettelin.txt" contents with the `cat` command. 
 
@@ -304,6 +300,8 @@ downloading strain NEM316
 downloading strain 2603V/R
 ~~~
 {: .output}
+
+
 
 Just as before, we should decompress the downloaded genome files using `gunzip`.
 To do so, we can use the `*` wildcard, which means "anything", instead of unzipping
