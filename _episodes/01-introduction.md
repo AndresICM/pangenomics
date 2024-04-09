@@ -1,7 +1,7 @@
 ---
 title: "Introduction to Pangenomics"
 teaching: 10
-exercises: 5
+exercises: 15
 questions:
 - "What is a pangenome?"
 - "What are the components of a pangenome?"
