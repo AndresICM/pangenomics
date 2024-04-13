@@ -1,7 +1,7 @@
 ---
 title: "Annotating Genomic Data"
 teaching: 40
-exercises: 20
+exercises: 25
 questions:
 - "How can I identify the genes in a genome?"
 objectives:
