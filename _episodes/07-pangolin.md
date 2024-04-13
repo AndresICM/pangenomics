@@ -1,7 +1,7 @@
 ---
 title: "Exploring Pangenome Graphs"
 teaching: 20
-exercises: 30
+exercises: 20
 questions:
 - "How can I build a pangenome of thousands of genomes?"
 - "How can I visualize the spatial relationship between gene families?"
