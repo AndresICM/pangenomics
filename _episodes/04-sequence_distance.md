@@ -18,7 +18,7 @@ To build a pangenome, we must determine which genes to compare between genomes. 
 genes with a common ancestor). Homology between genes is found through sequence similarity, and sequence similarity is measured by aligning the
 sequences and measuring the percentage of identity. The process of building gene families is called clustering.
 
-> ## Exercise 1: Pizza pangenomics
+> ## Exercise 1: Families in pizza pangenomics
 > Do Roma Tomatoes and Cherry Tomatoes belong to the same family? 
 >  
 >> ## Solution
