@@ -1,7 +1,7 @@
 ---
 title: "Clustering Protein Sequences"
 teaching: 30
-exercises: 0
+exercises: 10
 questions:
 - "Can I cluster my sequences automatically?"
 objectives:
