@@ -389,7 +389,8 @@ Without disturbing the active terminal, open a new window in your preferred brow
 {: .output}
 > ## Exercise 1: Explore the interactive plot.
 > Now we have a pangenome and we are going to give it an overview. Remember that Anvio allows us to have a very attractive view of different analyses in the same figure.
-> The best thing is that we can edit it as we like!
+> The best thing is that we can edit it as we like!.
+> 
 > In general, the innermost rings represent the genomes we used from Agalactiae to create the pangenome. We can observe that these rings are made up of the black color, which represents the number of gene clusters that are shared (gene core) in the Agalatiae genomes, while the grayish part represents the gene clusters that are absent in each genome.
 > 
 > Using the interactive pangenome, perform the following actions.
