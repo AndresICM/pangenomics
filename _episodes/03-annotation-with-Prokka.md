@@ -131,7 +131,7 @@ We encourage you to explore each output. The following table describes the conte
 
 Parameters can be modified as much as needed regarding the organism, the gene, and even the locus tag you are looking for.
 
-> ## Exercise 1: Inspecting the GBK
+> ## Exercise 1(Begginer): Inspecting the GBK
 > Open the `gbk` output file and carefully explore the information it contains. Which of the following statements is TRUE?
 > 
 > a) Prokka translates every single gene to its corresponding protein, even if the gene isn't a coding one.  
@@ -318,7 +318,7 @@ FEATURES             Location/Qualifiers
 
 Voilà! Our `gbk` files now have the strain code in the `ORGANISM` line.
 
-> ## Exercise 2: Counting coding sequences
+> ## Exercise 2(Intermediate): Counting coding sequences
 > 
 > Before we build our pangenome it can be useful to take a quick look at how many coding sequences each of our genomes have. This way we can 
 > know if they have a number close to the expected one (if we have some previous knowledge of our organism of study).
@@ -544,7 +544,7 @@ carbapenem; cephalosporin; penam
 ~~~
 {: .output}
 
-> ## Exercise 3: The most abundant resistance mechanisms
+> ## Exercise 3(Intermediate): The most abundant resistance mechanisms
 > 
 > Complete the following bash command to get the counts of each unique
 > resistance mechanism. Which one is the abundant?
@@ -587,7 +587,7 @@ carbapenem; cephalosporin; penam
 > {: .solution}
 {: .challenge}
 
-> ## Exercise 4: Annotating antibiotic resistance of multiple genomes
+> ## Exercise 4(Advanced): Annotating antibiotic resistance of multiple genomes
 > 
 > Fill in the blanks in the following bash loop in order to annotate each of
 > the eight genomes with RGI main and save outputs into
