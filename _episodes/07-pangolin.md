@@ -231,7 +231,7 @@ $ tree
 ~~~
 {: .output}
 
-> ## Exercise 1: PPanGGolin results.
+> ## Exercise 1(Begginer): PPanGGolin results.
 > Go to small groups (if you are learning at a Workshop) and explore one result file or set of result files to see what information they are giving you. 
 > Then explain to the rest of the group what you learned.
 > > ## Solution  
@@ -367,7 +367,7 @@ To view the interactive graph we will use the software **gephi**.
 Now we have a pangenome graph!
  
 
-> ## Exercise 2: Exploring the pangenome graph.
+> ## Exercise 2(Intermediate): Exploring the pangenome graph.
 > Finally we are looking at the pangenome graph. Here each node is a gene family, if you click on the black **T** at the bottom of the graph you can label them.  
 >   
 >  Explore the options of visualization for the pangenome graph, while trying to identify what each element of the graph represents (i.e. size of 
