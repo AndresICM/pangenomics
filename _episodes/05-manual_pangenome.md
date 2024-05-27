@@ -513,7 +513,7 @@ Function                  Gene                  Family
 ~~~
 {: .output}
 
-> ## Exercise 1: Partitioning the pangenome
+> ## Exercise 1(Begginer): Partitioning the pangenome
 > Since we have a very small pangenome we can know the partitions of our pangenome just by looking at a small table.
 > Look at the `mini_pangenom.tsv` table and decide which families correspond to the **Core**, **Shell** and **Cloud** genomes.
 > 
