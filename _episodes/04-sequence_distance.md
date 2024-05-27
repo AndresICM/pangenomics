@@ -18,7 +18,7 @@ To build a pangenome, we must determine which genes to compare between genomes. 
 genes with a common ancestor). Homology between genes is found through sequence similarity, and sequence similarity is measured by aligning the
 sequences and measuring the percentage of identity. The process of building gene families is called clustering.
 
-> ## Exercise 1: Families in pizza pangenomics
+> ## Exercise 1(Begginer): Families in pizza pangenomics
 > Do Roma Tomatoes and Cherry Tomatoes belong to the same family? 
 >  
 >> ## Solution
@@ -148,7 +148,7 @@ $ head -n4 output_blast/mini-genomes.blast
 ~~~
 {: .output}
 
-> ## Exercise 2: Remote blast search
+> ## Exercise 2(Intermediate): Remote blast search
 > We already know how to perform a BLAST search of one FASTA file with many sequences to a custom database of the same sequences.  
 > What if we want to search against the available NCBI databases?  
 > 1) Search on the help page of `blastp` how you can do a remote search.  
