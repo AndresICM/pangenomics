@@ -301,7 +301,7 @@ downloading strain 2603V/R
 ~~~
 {: .output}
 
-> ## Exercise 1: Loops
+> ## Exercise 1(Begginer): Loops
 >  Let's further practice using loops to download genomes in batches.
 >  For the sentences below, select only the necessary and their correct order to achieve the desired output:
 > 
@@ -514,7 +514,7 @@ $ rm agalactiae_CJB111/GCF_015221735.2_ASM1522173v2_genomic.fna
 >  can be downloaded by specifying our queries with `--format genbank`.
 {: .callout}
 
-> ## Exercise 2: Searching for desired strains
+> ## Exercise 2(Advanced): Searching for desired strains
 >  Until now we have downloaded only specific strains that we were looking for. Write a command that would tell you which genomes are 
 >  available for all the *Streptococcus* genera.
 >
