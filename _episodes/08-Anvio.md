@@ -387,7 +387,7 @@ Without disturbing the active terminal, open a new window in your preferred brow
 </a>
 
 {: .output}
-> ## Exercise 1: Explore the interactive plot.
+> ## Exercise 1(Begginer): Explore the interactive plot.
 > Now we have a pangenome and we are going to give it an overview. Remember that Anvio allows us to have a very attractive view of different analyses in the same figure.
 > The best thing is that we can edit it as we like!.
 > 
