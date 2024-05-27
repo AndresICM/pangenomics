@@ -265,7 +265,7 @@ $ head gene_families.tsv
 
 Now we have in only one file the description of our clustering results!
 
-> ## Exercise 1: Counting singletons
+> ## Exercise 1(Intermediate): Counting singletons
 >
 > Singleton gene families are those which are present only in a single genome. Their
 > importance lies in that they are often related to ecological adaptations. Complete
